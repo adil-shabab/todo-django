@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% load static %}
+
+
+{% block content %}
+<div style="width: 320px" class="body">
+  <h5>Update Task</h5>
+
+  <form class="w-100 shadow mt-3 p-3" action="" method="POST">
+    {% csrf_token %} 
+    {% for field in form %}
+      <label for="{{field.auto_id}}"><span>{{field.label}}</span></label>
+    {% endfor %}
+    {{form.title}}
+    <button class="mt-2 rounded" type="submit"><span>Update</span></button>
+  </form>
+</div>
+{% endblock content %}

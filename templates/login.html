@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock style %}
+
+{% block content %}
+  <div class="rounded bg-white shadow mt-5 mb-3 login-container">
+    <h4 class="text-center">Login</h4>
+    <form style="position: relative;" action="" method="POST">
+      <i id="icon" style="position: absolute; top: 102px; right: 15px; cursor:pointer;" class="fa-solid fa-eye-slash"></i>
+        {% csrf_token %}
+        <label class="w-100" for="username">Username</label><br>
+        <input class="w-100" type="text" name="username"><br>
+        <label class="w-100" for="password">Password</label><br>
+        <input id="password" class="w-100" type="password" name="password"><br>
+        {% for message in messages %}
+          <span class="text-center mt-2 text-danger">{{message}}</span><br>
+        {% endfor %}
+        <button class="btn btn-success px-3 font-weight-bold mt-4" type="submit">Login</button>
+        <p class="mt-3 text-center">Dont have an account ? <a href="{% url 'signup' %}">Signup</a></p>
+    </form>
+  </div>
+
+
+
+  <script>
+
+    let icon = document.getElementById('icon')
+    passwordfield = document.getElementById('password')
+
+    const toggle = () => {
+      if(icon.classList.contains('fa-eye-slash')){
+        icon.classList.remove('fa-eye-slash')
+        icon.classList.add('fa-eye')
+        passwordfield.setAttribute('type', 'text')
+      }else{
+        icon.classList.remove('fa-eye')
+        icon.classList.add('fa-eye-slash')
+        passwordfield.setAttribute('type', 'password')
+
+      }
+    }
+
+
+    icon.addEventListener('click', toggle)
+  </script>
+{% endblock content %}

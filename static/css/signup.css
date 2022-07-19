@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Stick+No+Bills:wght@200;400&display=swap');
+
+
+.login-container,
+.signup-container{
+    width: 330px;
+    padding: 20px 25px;
+}
+.field{
+    width: 100%;
+}
+#id_password1,
+#id_password2
+{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: green !important;
+}
+a:hover{
+    text-decoration: none;
+}
+p{
+    font-family: 'Lobster', cursive;
+}
+h4{
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px !important;
+    color: green;
+}
+label{
+    color: rgb(31, 93, 31);
+}

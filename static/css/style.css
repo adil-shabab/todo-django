@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Stick+No+Bills:wght@200;400&display=swap');
+
+button{
+    background: #5783db;
+    color: white;
+    border: 1px solid #5783db;
+    transition: 0.5s ease;
+    height: 35px;
+    font-weight: bold;
+}
+button:hover{
+    background: white;
+    color: #5783db;
+    border: 1px solid #5783db;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
+    width: 320px;
+}
+.form{
+    width: 98%;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+.form button{
+    width: 80%;
+    border-radius: 6px;
+}
+.tasks{
+    width: 98%;
+    padding: 5px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+}
+span{
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.tasks button{
+    border-radius: 6px;
+}
+h5{
+    font-family: 'Stick No Bills', sans-serif;
+}
+.completed-task{
+    width: 98%;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+.span{
+    font-family: 'Stick No Bills', sans-serif;
+}
+.completed-task button{
+    border-radius: 6px;
+}
